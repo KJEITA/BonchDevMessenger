@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
+
+    android:background="@drawable/gradient"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Сергей"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/email_text_view"
+        app:layout_constraintStart_toStartOf="@+id/email_text_view" />
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="first_real_app@yandex.ru"
+        android:gravity="center"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_confirm_button"
+        app:layout_constraintEnd_toEndOf="@+id/email_confirm_button"
+        app:layout_constraintStart_toStartOf="@+id/email_confirm_button" />
+
+    <Button
+        android:id="@+id/email_confirm_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/fields"
+        android:text="Подтвердить почту"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/change_password_button"
+        app:layout_constraintEnd_toEndOf="@+id/change_password_button"
+        app:layout_constraintStart_toStartOf="@+id/change_password_button" />
+
+    <Button
+        android:id="@+id/change_password_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/fields"
+        android:onClick="changePassword"
+        android:text="Поменять пароль"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_out_button"
+        app:layout_constraintEnd_toEndOf="@+id/sign_out_button"
+        app:layout_constraintStart_toStartOf="@+id/sign_out_button" />
+
+    <Button
+        android:id="@+id/sign_out_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/fields"
+        android:text="Выйти"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/name_edit_text"
+        app:layout_constraintEnd_toEndOf="@+id/name_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/name_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

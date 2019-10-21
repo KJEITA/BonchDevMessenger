@@ -4,6 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".UI.activities.SignUpActivity">
 
+    <TextView
+        android:id="@+id/reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Регистрация"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_sign_up_et"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Почта"
+        app:layout_constraintBottom_toTopOf="@+id/login_et"
+        app:layout_constraintEnd_toEndOf="@+id/login_et"
+        app:layout_constraintStart_toStartOf="@+id/login_et" />
+
+    <EditText
+        android:id="@+id/login_et"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Логин"
+        app:layout_constraintBottom_toTopOf="@+id/password_sign_up_et"
+        app:layout_constraintEnd_toEndOf="@+id/password_sign_up_et"
+        app:layout_constraintStart_toStartOf="@+id/password_sign_up_et" />
+
+    <EditText
+        android:id="@+id/password_sign_up_et"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Пароль"
+        app:layout_constraintBottom_toTopOf="@+id/password_confirm_et"
+        app:layout_constraintEnd_toEndOf="@+id/password_confirm_et"
+        app:layout_constraintStart_toStartOf="@+id/password_confirm_et" />
+
+    <EditText
+        android:id="@+id/password_confirm_et"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Подтвердите пароль"
+        app:layout_constraintBottom_toTopOf="@+id/complete_sign_up_button"
+        app:layout_constraintEnd_toEndOf="@+id/complete_sign_up_button"
+        app:layout_constraintStart_toStartOf="@+id/complete_sign_up_button" />
+
+    <Button
+        android:id="@+id/complete_sign_up_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/fields"
+        android:onClick="signUp"
+        android:text="Зарегистрироваться"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
