@@ -25,7 +25,7 @@
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Почта"
+        android:hint="Почта"
         app:layout_constraintBottom_toTopOf="@+id/login_et"
         app:layout_constraintEnd_toEndOf="@+id/login_et"
         app:layout_constraintStart_toStartOf="@+id/login_et" />
@@ -37,7 +37,7 @@
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Логин"
+        android:hint="Логин"
         app:layout_constraintBottom_toTopOf="@+id/password_sign_up_et"
         app:layout_constraintEnd_toEndOf="@+id/password_sign_up_et"
         app:layout_constraintStart_toStartOf="@+id/password_sign_up_et" />
@@ -49,7 +49,7 @@
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Пароль"
+        android:hint="Пароль"
         app:layout_constraintBottom_toTopOf="@+id/password_confirm_et"
         app:layout_constraintEnd_toEndOf="@+id/password_confirm_et"
         app:layout_constraintStart_toStartOf="@+id/password_confirm_et" />
@@ -61,7 +61,7 @@
         android:layout_marginBottom="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Подтвердите пароль"
+        android:hint="Подтвердите пароль"
         app:layout_constraintBottom_toTopOf="@+id/complete_sign_up_button"
         app:layout_constraintEnd_toEndOf="@+id/complete_sign_up_button"
         app:layout_constraintStart_toStartOf="@+id/complete_sign_up_button" />

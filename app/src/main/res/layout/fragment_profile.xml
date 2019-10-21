@@ -14,7 +14,7 @@
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Сергей"
+        android:hint="Сергей"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/email_text_view"
         app:layout_constraintEnd_toEndOf="@+id/email_text_view"
