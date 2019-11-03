@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import bonch.dev.school.R
-import bonch.dev.school.UI.fragments.ChatFragmenst
 
 class SignInActivity : AppCompatActivity() {
 

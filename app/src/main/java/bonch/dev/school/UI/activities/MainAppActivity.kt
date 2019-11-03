@@ -2,7 +2,6 @@ package bonch.dev.school.UI.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -11,14 +10,15 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.RecyclerView
 import bonch.dev.school.R
-import bonch.dev.school.UI.fragments.ChatFragmenst
 import bonch.dev.school.UI.fragments.PasswordFragment
-import bonch.dev.school.UI.fragments.ProfileFragment
 import com.google.android.material.navigation.NavigationView
 
 class MainAppActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
+
+    private lateinit var MessageRecyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,4 +53,6 @@ class MainAppActivity : AppCompatActivity() {
     fun changePassword(view: View) {
         PasswordFragment().show(supportFragmentManager, "change_pswrd")
     }
+
+
 }
