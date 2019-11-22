@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "860191279495",
+    "firebase_url": "https://bonch-dev-messenger-bd031.firebaseio.com",
+    "project_id": "bonch-dev-messenger-bd031",
+    "storage_bucket": "bonch-dev-messenger-bd031.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860191279495:android:b82f66380c53b2a3cd2b22",
+        "android_client_info": {
+          "package_name": "bonch.dev.school"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860191279495-mjj3ufpmg5cve8djmj5uq754ehvdma2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bonch.dev.school",
+            "certificate_hash": "016af832f96b824ecec8668972caa0397a5123f4"
+          }
+        },
+        {
+          "client_id": "860191279495-lk7k1j1lk5hk3t8c8bq51mi0ijel8jem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABHlQIf3hH5AUKCDyIg5ftzOtUNJGodws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860191279495-lk7k1j1lk5hk3t8c8bq51mi0ijel8jem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

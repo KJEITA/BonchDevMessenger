@@ -1,28 +1,28 @@
 package bonch.dev.school.Models
 
-import java.sql.Time
-import java.text.SimpleDateFormat
-import java.time.LocalDateTime
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import java.util.*
-import java.util.Calendar.getInstance
 
+@Parcelize
 data class Message(
     val messageId: Int,
     val messageText: String,
-    val sentDate: Date,
+    val sentDate: String,
     val isUser: Boolean
-)
+) : Parcelable {
 
-class MessageLab() {
-    val messageList: MutableList<Message>
+    class MessageLab() {
+        val messageList: MutableList<Message>
 
-    init {
-        messageList = mutableListOf()
-        for (i in 0..99) {
-            var b = true
-            if (i % 2 == 0) b = false
-            var message = Message(i, "Title #$i", Calendar.getInstance().time, b)
-            messageList.add(message)
+        init {
+
+            messageList = mutableListOf()
+                /*var b = true
+
+                var message = Message(0, "Title #$0", Calendar.getInstance().time, b)
+                messageList.add(message)*/
+
         }
     }
 }

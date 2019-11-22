@@ -4,19 +4,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import bonch.dev.school.Models.Message
-import bonch.dev.school.Models.MessageLab
 import bonch.dev.school.R
 
 class Message_recycler_items : RecyclerView.Adapter<Message_recycler_items.MessageHolder>() {
 
-
-
-    val messageLab = MessageLab()
+    public val messageLab = Message.MessageLab()
 
     var messageList = messageLab.messageList
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -24,7 +21,7 @@ class Message_recycler_items : RecyclerView.Adapter<Message_recycler_items.Messa
     ): MessageHolder {
         var view: View
 
-        messageList = messageLab.messageList
+        //messageList = mutableListOf()
 
         if (viewType == 1)
             view = LayoutInflater.from(parent.context)
@@ -36,12 +33,12 @@ class Message_recycler_items : RecyclerView.Adapter<Message_recycler_items.Messa
         return MessageHolder(view)
     }
 
-    public fun refreshData(mess:Message) {
+    public fun refreshData(mess: Message) {
+        messageList.add(mess)
+    }
 
-
-        messageLab.messageList.add(mess)
-
-        messageList = messageLab.messageList
+    public fun updateData(list: MutableList<Message>) {
+        messageList = list
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -62,8 +59,10 @@ class Message_recycler_items : RecyclerView.Adapter<Message_recycler_items.Messa
     inner class MessageHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(position: Int) {
             val idTextView = itemView.findViewById<TextView>(R.id.text_message)
+            val timeTextView = itemView.findViewById<TextView>(R.id.time_message)
             val t = messageList[position].messageText
             idTextView.text = t
+            timeTextView.text = messageList[position].sentDate
         }
     }
 }
